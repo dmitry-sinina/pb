@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message initialAuthRequest {
+	string tmpToken;
+}
+
+message initialAuthResponse {
+	enum response {
+		OK = 0;
+		ERR = 1;
+	}
+	optional string reason;
+}
+
+message setPushToken {
+	string pushToken
+}
+
